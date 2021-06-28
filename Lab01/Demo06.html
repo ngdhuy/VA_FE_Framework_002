@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo Ajax</h1>
+    <button type="button">Load data - GET</button>
+    <button type="button">Load data - POST</button>
+    <button type="button">Load data - AJAX</button>
+    <ul>GET</ul>
+    <div>AJAX</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button:eq(0)').click(function(){
+                $.get('data.json?a=1&b=999', function(data){
+                    data.forEach(function(item) {
+                        // item = data[i] = {id: , name}
+                        var li = $('<li></li>').append(item["id"] + " - " + item["name"])
+                        $('ul').append(li);
+                    });
+                }).fail(function(){
+                    console.log("Cannot load data from Server");
+                }).done(function(){
+                    console.log("DONE");
+                });
+            });
+
+            // $('button:eq(1)').click(function(){
+            //     $.post('data.json', {'a': 100}, function(data, status){
+            //         console.log(status);
+            //         data.forEach(function(item) {
+            //             var p = $("<p></p>").append(item["name"]);
+            //             $("div").append(p);
+            //         });
+            //     });
+            // });
+
+            $('button:eq(2)').click(function(){
+                $.ajax({
+                    url: "data.json",
+                    method: "get"
+                }).done(function(data){
+                    data.forEach(function(item){
+                        var p = $("<p></p>").append(item["name"]);
+                        $("div").append(p);
+                    });
+                });
+            });
+        })
+    </script>
+</body>
+</html>
