@@ -1,0 +1,35 @@
+// Extend/Inheritance
+@use 'Dark' as theme
+
+%setSize
+    padding: 10px 20px
+    margin: 5px 0 0 0
+%setContentColor
+    color: theme.$color-white
+    background-color: theme.$color-blue
+%setBodyColor
+    background-color: theme.$body-color
+    color: theme.$font-color
+
+body
+    @extend %setBodyColor
+h1
+    color: theme.$color-red
+div
+    @extend %setContentColor
+    margin: 5px
+nav
+    div
+        @extend %setBodyColor
+    ul
+        list-style: none
+        li
+            @extend %setContentColor
+            @extend %setSize
+    a
+        text-decoration: none
+        color: theme.$color-white
+        background-color: theme.$color-red
+        display: block
+        width: 100%
+        @extend %setSize

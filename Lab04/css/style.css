@@ -1,0 +1,44 @@
+.menu-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(52, 58, 64, 0.5);
+}
+
+.menu-toggle:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.offcanvas {
+    background-color: #1d809f;
+    color: #fff;
+    width: 250px;
+}
+
+.offcanvas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.offcanvas a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 15px;
+}
+
+.offcanvas a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.offcanvas-body {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="keywork">Keyword:</label>
+    <input type="text" id="keyword" />
+    
+    <div></div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var arr = ["America", "Canada", "England", "France", "Singapore", "Vietnam"];
+
+            $("input").keyup(function(){
+                $("div").html('');
+                key = this.value;
+
+                flagInvalid = true;
+                
+                arr.forEach(function(item) {
+                    if(item.search(key) != -1) {
+                        var p = $("<p></p>").append(item);
+                        $("div").append(p);
+
+                        flagInvalid = false; 
+                    }
+                });
+
+                if(flagInvalid == true) {
+                    $("div").append("Keyword is invalid")
+                }
+            });
+        });
+    </script>
+</body>
+</html>

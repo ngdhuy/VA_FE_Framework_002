@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Embed bootstrap</title>
+    <style type="text/css">
+        div {
+            margin: 5px 0 5px 0;
+            padding: 5px;
+            background-color: #cc3366;
+            min-height: 100px;
+        }
+
+        .row {
+            background-color: #3366cc;
+        }
+
+        .row > div {
+            background-color: #33cc66;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">item</div>
+        </div>
+        <div class="row">
+            <div class="col">item</div>
+            <div class="col">item</div>
+            <div class="col">item</div>
+            <div class="col">item</div>
+        </div>
+        <div class="row">
+            <div class="col-2">item</div>
+            <div class="col">item</div>
+            <div class="col-2">item</div>
+        </div>
+        <div class="row row-cols-4">
+            <div class="col">item 1</div>
+            <div class="col">item 2</div>
+            <div class="col">item 3</div>
+            <div class="col">item 4</div>
+            <div class="col">item 5</div>
+            <div class="col">item 6</div>
+        </div>
+        <div class="row">
+            <div class="col-3">item</div>
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-8">item 5</div>
+                    <div class="col-4">item 6</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

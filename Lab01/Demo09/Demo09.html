@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.min.css">
+    <style type="text/css">
+        div div {
+            background-color: #cc3366;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="owl-carousel">
+        <div>Your content 1</div>
+        <div>Your content 2</div>
+        <div>Your content 3</div>
+        <div>Your content 4</div>
+        <div>Your content 5</div>
+        <div>Your content 6</div>
+        <div>Your content 7</div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                margin: 5,
+                autoplay: true,
+                loop: true, 
+                smartSpeed: 100,
+                autoplayTimeout: 500
+            });
+        })
+    </script>
+</body>
+</html>

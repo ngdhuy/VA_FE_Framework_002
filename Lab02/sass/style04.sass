@@ -1,0 +1,39 @@
+// Mixin ~ function
+
+@use 'Light' as theme
+
+@mixin setSize($top-bottom, $left-right)
+    padding: $top-bottom $left-right
+    margin: 1px 0 0 0
+
+body
+    background-color: theme.$body-color
+    color: theme.$font-color
+
+h1
+    color: theme.$color-red
+
+div
+    background-color: theme.$color-blue
+    margin: 5px
+
+nav
+    div
+        color: theme.$color-red
+        background-color: theme.$body-color
+        
+    ul
+        list-style: none
+
+        li
+            background-color: theme.$color-blue
+            @include setSize(5px, 10px)
+            
+
+    a
+        text-decoration: none
+        color: theme.$color-white
+        background-color: theme.$color-red
+        display: block
+        width: 100%
+        @include setSize(5px, 10px)

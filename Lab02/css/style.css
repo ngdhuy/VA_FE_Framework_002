@@ -1,0 +1,42 @@
+nav a, nav ul li {
+  padding: 10px 20px;
+  margin: 5px 0.165%;
+}
+
+nav ul li, div {
+  color: #b1bfca;
+  background-color: #0077c2;
+}
+
+nav div, body {
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  color: #ba2d65;
+}
+
+div {
+  margin: 5px;
+}
+
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  width: 33.3333333333%;
+}
+nav a {
+  text-decoration: none;
+  color: #b1bfca;
+  background-color: #ba2d65;
+  display: block;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
