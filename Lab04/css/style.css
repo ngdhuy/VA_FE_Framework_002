@@ -1,3 +1,37 @@
+/* CSS4 */
+@charset 'UTF-8';
+
+:root {
+    --bs-blue: #1D809F;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ecb807;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1D809F;
+    --bs-secondary: #ecb807;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ecb807;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+body {
+    font-family: 'Source Sans Pro';
+}
+
 .menu-toggle {
     position: fixed;
     right: 15px;
@@ -16,7 +50,7 @@
 }
 
 .offcanvas {
-    background-color: #1d809f;
+    background-color: var(--bs-blue);
     color: #fff;
     width: 250px;
 }
@@ -42,3 +76,103 @@
     margin: 0;
     padding: 0;
 }
+
+.offcanvas-header {
+    background-color: rgba(52, 58, 64, 0.1);
+}
+
+header {
+    background: url("../img/bg-masthead.jpg");
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+h1 { 
+    font-weight: 700; 
+    font-size: 5.5rem;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.0rem;
+}
+
+h3 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    color: var(--bs-yellow);
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: var(--bs-blue);
+    border-color: var(--bs-blue);
+}
+
+.btn-primary:active {
+    background-color: #17667f;
+    border-color: #166077;
+}
+
+.btn-primary:hover {
+    background-color: #17667f;
+    border-color: #166077;
+}
+
+.btn-xl {
+    padding: 1.25rem 2.5rem;
+    color: #fff;
+}
+
+#about { min-height: 100vh; }
+
+#service {
+    min-height: 100vh;
+    background-color: var(--bs-blue);
+    color: #fff;
+}
+
+.service-icon {
+    background-color: #fff;
+    color: var(--bs-blue);
+    height: 7rem;
+    width: 7rem;
+    line-height: 7rem;
+    display: block;
+    font-size: 2.5rem;
+    border-radius: 50%;
+}
+
+.service-heading {
+    font-size: 1.5rem;
+}
+
+.service-text {
+    font-weight: 400;
+    font-size: 1.0rem;
+    color: rgba(255,255,255, 0.7);
+}
+
+#callout {
+    min-height: 100vh;
+    background: url("../img/bg-callout.jpg");
+    background-repeat: none;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#portfolio { min-height: 100vh;}
