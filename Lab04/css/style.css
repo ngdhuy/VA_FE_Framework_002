@@ -175,4 +175,90 @@ p {
     background-attachment: fixed;
 }
 
-#portfolio { min-height: 100vh;}
+#portfolio { 
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.portfolio-item { 
+    margin: 0; 
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+    max-width: 100%;
+}
+
+.portfolio-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+}
+
+.caption {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(33, 37, 41, 0.2);
+    z-index: 1;
+    color: #fff;
+    text-align: left;
+    padding: 50px;
+
+    transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    transition: clip-path 0.25s ease-out, background-color 0.7s;
+    transition: clip-path 0.25s ease-out, background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+}
+
+.portfolio-item:hover .caption {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+    background-color: rgba(33, 37, 41, 0.75);
+}
+
+.caption div {
+    margin-top: 16rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.caption p {
+    font-size: 1rem;
+}
+
+#action { 
+    min-height: 50vh;
+    background-color: var(--bs-blue);
+}
+
+#action h3 {
+    color: #fff;
+    font-style: normal;
+}
+
+#action .btn-light { color: #000; }
+
+#map { min-height: 50vh; }
+
+#footer { min-height: 50vh; }
+
+.footer-icon {
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    border-radius: 3rem;
+    background-color: var(--bs-blue);
+    color: #fff;
+    font-size: 2rem;
+}
